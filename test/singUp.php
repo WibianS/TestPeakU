@@ -1,16 +1,19 @@
 <?php
 
     //registro de usuarios 
-
+    header("Access-Control-Allow-Origin: *");
+    header("Access-Control-Allow-Headers: Origin, Content-Type");
     require 'conexion.php';
+    // $post = json_decode(file_get_contents("php://input"));
 
     $mail=$_POST['mail'];
     $name=$_POST['name'];
     $password=$_POST['password'];
+    $message=[];
     if($password!=null && $mail!=null){//verifica que se hayan enviado los datos y no esten vacios
 
         $search="SELECT mail FROM users where mail='".$mail."'";//consulta si ya esta registrado el correo
-        $rse=$connector->query($name);
+        $rse=$connector->query($search);
         $fse=$rse->fetch_assoc();
         //comprueba si devuelve falso o verdadero la consulta
         if($fse==false){
