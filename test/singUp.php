@@ -4,11 +4,11 @@
     header("Access-Control-Allow-Origin: *");
     header("Access-Control-Allow-Headers: Origin, Content-Type");
     require 'conexion.php';
-    // $post = json_decode(file_get_contents("php://input"));
+    $post = json_decode(file_get_contents("php://input"));
 
-    $mail=$_POST['mail'];
-    $name=$_POST['name'];
-    $password=$_POST['password'];
+    $mail=$post->mail;
+    $name=$post->name;
+    $password=$post->password;
     $message=[];
     if($password!=null && $mail!=null){//verifica que se hayan enviado los datos y no esten vacios
 
