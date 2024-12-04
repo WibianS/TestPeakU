@@ -1,0 +1,8 @@
+El proyecto es una sencilla página web que muestra publicaciones creadas por un usuario, consta de un home donde se puede ver el formulario para registrarse, el link para iniciar sesión y los post publicados actualmente.
+
+Para la creación de este proyecto me enfoqué en realizar el backend en php, consta de 4 archivos, uno se encarga del registro del usuario, otro del logueo, otro de la creación de post y el último el que se encarga de consultar
+los post publicados y mostrarlos por orden según el título, el backend se conecta a una base de datos sencilla en mysql que consta de 2 tablas, la de usuarios donde se ingresa la información del usuario (id,nombre,correo y contraseña),
+y la de post (id, titulo, contenido, id usuario creador).
+
+En el frontend use el framework angular que me permite la fácil creación de SPA, consta de 3 componentes, el home, el login y la creación de publicaciones, use solicitudes http para la comunicación con el backend, cada componente
+tiene sus respectivas funciones que se encargan de enviar las solicitudes y recibir la respuesta de estas, para el diseño use bootstrap y un poco de mi propio css para personalizarlo
